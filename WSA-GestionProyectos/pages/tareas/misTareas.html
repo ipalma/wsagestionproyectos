@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>misTareas</title>
+
+    <link href="misTareas.css" rel="stylesheet" />
+    <script src="misTareas.js"></script>
+</head>
+<body>
+    <div id="templateMisTareas" data-win-control="WinJS.Binding.Template">
+        <div>
+            <div class="estiloProyecto">
+                <h1 data-win-bind="innerText:nombre"></h1>
+                <hr />
+                <span><strong>Descripcion: </strong></span>
+                <p data-win-bind="innerText:descripcion"></p>
+                <span>Tiempo Estimado: </span>
+                <span data-win-bind="innerText:tiempoEstimado"></span>
+                <span>Horas</span>
+            </div>
+        </div>
+    </div>
+<div class="misTareas fragment">
+    <header class="page-header" aria-label="Header content" role="banner">
+        <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
+        <h1 class="titlearea win-type-ellipsis">
+            <span class="pagetitle">Mis Tareas</span>
+        </h1>
+    </header>
+    <section class="page-section" aria-label="Main content" role="main">
+        <h1>Tareas</h1>
+        <div id="listaMisTareasPgn" data-win-control="WinJS.UI.ListView"
+             data-win-options="{itemDataSource:DatosDelUsuario.MisTarea.dataSource,
+             itemTemplate: select('#templateMisTareas'),
+             layout:{type: WinJS.UI.CellSpanningLayout}}"></div>
+    </section>
+</div>
+</body>
+</html>

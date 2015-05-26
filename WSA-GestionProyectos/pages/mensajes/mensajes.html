@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>mensajes</title>
+
+    <!-- Referencias de WinJS -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet" />
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <link href="mensajes.css" rel="stylesheet" />
+    <script src="mensajes.js"></script>
+    <script src="../proyectos/misProyectos.js"></script>
+</head>
+<body>
+
+<div id="templateMensajes" data-win-control="WinJS.Binding.Template">
+    <div>
+        <img data-win-bind="src:fotoRem" style="max-width: 150px; min-width: 150px;"/>
+
+        <div class="estilomensajes">
+            <h3 data-win-bind="innerText:nombreRem"></h3>
+            <p data-win-bind="innerText:fecha"></p>
+            <p data-win-bind="innerText:contenido"></p>
+        </div>
+    </div>
+</div>
+
+<div class="mensajes fragment">
+    <header class="page-header" aria-label="Header content" role="banner">
+        <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
+        <h1 class="titlearea win-type-ellipsis Tituloh1">
+            <span class="pagetitle">Mis mensajes</span>
+        </h1>
+    </header>
+    <section class="page-section" aria-label="Main content" role="main">
+        <div id="listaMisProyectos" data-win-control="WinJS.UI.ListView"
+             data-win-options="{itemDataSource:DatosMensaje.MisMensajes.dataSource,
+             itemTemplate: select('#templateMensajes'),
+             layout:{type: WinJS.UI.ListLayout}}"></div>
+    </section>
+</div>
+</body>
+</html>
+
+

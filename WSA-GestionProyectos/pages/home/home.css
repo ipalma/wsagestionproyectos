@@ -1,0 +1,41 @@
+﻿.homepage section[role=main] {
+    margin: auto 120px;
+}
+
+#usuarioFlyout {
+    width: 100%;
+    max-width: none;
+    margin: 5px 0px 0px 0px;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+#proyectoFlyout {
+    width: 100%;
+    max-width: none;
+    margin: 5px 0px 0px 0px;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+#tareaFlyout {
+    width: 100%;
+    max-width: none;
+    margin: 5px 0px 0px 0px;
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+.subMenu1 {
+    background: white;
+    box-shadow: 4px 4px rgba(50,50,50,0.8);
+	
+}
+.bodyfondo {
+	background-color: white;
+}
+
+.Tituloh1 {
+	background-color: #23354B;
+}

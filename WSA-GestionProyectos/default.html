@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>WSA_GestionProyectos</title>
+
+    <!-- WinJS references -->
+    <link href="//Microsoft.WinJS.2.0/css/ui-dark.css" rel="stylesheet">
+    <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
+    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
+
+    <!-- WSA_GestionProyectos references -->
+    <link href="/css/default.css" rel="stylesheet" />
+    <script src="/js/default.js"></script>
+    <script src="/js/navigator.js"></script>
+    <script src="/js/NavBarAcciones.js"></script>
+    <script src="js/Modelo.js"></script>
+    <script src="js/Azure.js"></script>
+
+</head>
+<body class="fondo">
+    <!--Aquí va el NavBar-->
+<div id="NavBar" class="NavBarContainer NavBarcolor" data-win-control="WinJS.UI.NavBar" data-win-options="{ placement: 'top'}">
+    <div id="navBarPrincipal" class="NavBarContainer" data-win-control="WinJS.UI.NavBarContainer">
+        <div data-win-control="WinJS.UI.NavBarCommand" data-win-options="{id: 'navInicio', label: 'Inicio', icon: WinJS.UI.AppBarIcon.home, splitButton: false}"></div>
+        <div data-win-control="WinJS.UI.NavBarCommand" data-win-options="{id: 'navUsuario', label: 'Usuarios', icon: WinJS.UI.AppBarIcon.contact, splitButton: true }"></div>
+        <div data-win-control="WinJS.UI.NavBarCommand" data-win-options="{id: 'navProyecto', label: 'Proyectos', icon: WinJS.UI.AppBarIcon.manage, splitButton: true }"></div>
+        <div data-win-control="WinJS.UI.NavBarCommand" data-win-options="{id: 'navTarea', label: 'Tareas', icon: WinJS.UI.AppBarIcon.list, splitButton: true }"></div>
+        <div data-win-control="WinJS.UI.NavBarCommand" data-win-options="{id: 'navMensajes', label: 'Mensajes', icon: WinJS.UI.AppBarIcon.list, splitButton: false}"></div>
+    </div>
+</div>
+    <div id="usuarioFlyout" class="colorsubmenu" data-win-control="WinJS.UI.Flyout" data-win-options="{ placement: 'bottom' }">
+        <div id="usuarioNavBarContainer" data-win-control="WinJS.UI.NavBarContainer">
+            <div class="subMenu1" data-win-control="WinJS.UI.NavBarCommand" data-win-options="{ id: 'navMisContactos', label: 'Mis Contactos' }"></div>
+            <div class="subMenu1" data-win-control="WinJS.UI.NavBarCommand" data-win-options="{ id: 'navTodosUsuario', label: 'Todos los Usuarios' }"></div>
+            <div class="subMenu1" data-win-control="WinJS.UI.NavBarCommand" data-win-options="{ id: 'navAltaUsuario', label: 'Crear Nuevos Usuarios' }"></div>
+        </div>
+    </div>
+    <div id="proyectoFlyout" data-win-control="WinJS.UI.Flyout" data-win-options="{ placement: 'bottom' }">
+        <div id="proyectoNavBarContainer" data-win-control="WinJS.UI.NavBarContainer">
+            <div class="subMenu1" data-win-control="WinJS.UI.NavBarCommand" data-win-options="{id: 'navMisProyectos', label: 'Mis Proyectos'}"></div>
+            <div class="subMenu1" data-win-control="WinJS.UI.NavBarCommand" data-win-options="{id: 'navTodosProyectos', label: 'Todos los proyectos' }"></div>
+            <div class="subMenu1" data-win-control="WinJS.UI.NavBarCommand" data-win-options="{id: 'navNuevosProyectos', label: 'Crear Nuevos Proyectos' }"></div>
+        </div>
+    </div>
+    <div id="tareaFlyout" data-win-control="WinJS.UI.Flyout" data-win-options="{ placement: 'bottom' }">
+        <div id="tareaNavBarContainer" data-win-control="WinJS.UI.NavBarContainer">
+            <div class="subMenu1" data-win-control="WinJS.UI.NavBarCommand" data-win-options="{id: 'navMisTareas', label: 'Mis Tareas' }"></div>
+            <div class="subMenu1" data-win-control="WinJS.UI.NavBarCommand" data-win-options="{id: 'navTodasTareas', label: 'Todas las Tareas' }"></div>
+            <div class="subMenu1" data-win-control="WinJS.UI.NavBarCommand" data-win-options="{id: 'navNuevaTarea', label: 'Crear Nueva Tarea' }"></div>
+        </div>
+    </div>
+<div id="contenthost" data-win-control="Application.PageControlNavigator" data-win-options="{home: '/pages/home/home.html'}"></div>
+<!-- <div id="appbar" data-win-control="WinJS.UI.AppBar">
+    <button data-win-control="WinJS.UI.AppBarCommand" data-win-options="{id:'cmd', label:'Command', icon:'placeholder'}" type="button"></button>
+</div> -->
+</body>
+</html>

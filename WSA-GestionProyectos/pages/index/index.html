@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <title>index</title>
+
+    <link href="index.css" rel="stylesheet" />
+    <script src="index.js"></script>
+</head>
+<body>
+<div id="templateMisTareas" data-win-control="WinJS.Binding.Template">
+    <div>
+        <div class="estiloProyecto">
+            <h1 data-win-bind="innerText:nombre"></h1>
+            <hr/>
+            <span><strong>Descripcion: </strong></span>
+            <p data-win-bind="innerText:descripcion"></p>
+            <span>Tiempo Estimado: </span>
+            <span data-win-bind="innerText:tiempoEstimado"></span>
+            <span>Horas</span>
+        </div>
+    </div>
+</div>
+    <div id="templateMisProyectos" data-win-control="WinJS.Binding.Template">
+        <div>
+            <div class="estiloProyecto">
+                <h1 data-win-bind="innerText:nombre"></h1>
+                <hr />
+                <span><strong>Descripcion: </strong></span>
+                <p data-win-bind="innerText:descripcion"></p>
+                <span>Tiempo Estimado: </span>
+                <span data-win-bind="innerText:tiempoEstimado"></span>
+                <span>Horas</span>
+            </div>
+        </div>
+    </div>
+<div class="index fragment">
+    <header class="page-header" aria-label="Header content" role="banner">
+        <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
+        <h1 id="titulo" class="titlearea win-type-ellipsis Tituloh1">
+            <span class="pagetitle">Hola</span>
+            <span class="pagetitle" data-win-bind="innerText:nombre; "></span>
+            <span class="pagetitle" data-win-bind="innerText:apellido"></span>
+        </h1>
+    </header>
+    <section id="page-section" class="page-section" aria-label="Main content" role="main">
+        <img id="fotografia" data-win-bind="src:foto" />
+        <h1>Tareas</h1>
+        <div id="listaMisTareas" data-win-control="WinJS.UI.ListView"
+             data-win-options="{itemDataSource:DatosDelUsuario.MisTarea.dataSource,
+             itemTemplate: select('#templateMisTareas'),
+             layout:{type: WinJS.UI.ListLayout}}"></div>
+
+        <h1>Proyectos</h1>
+        <div id="listaMisTareas" data-win-control="WinJS.UI.ListView"
+             data-win-options="{itemDataSource:DatosDelUsuario.MisProyectos.dataSource,
+             itemTemplate: select('#templateMisProyectos'),
+             layout:{type: WinJS.UI.ListLayout}}"></div>
+    </section>
+</div>
+</body>
+</html>

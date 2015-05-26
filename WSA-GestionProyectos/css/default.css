@@ -1,0 +1,114 @@
+﻿#contenthost {
+    height: 100%;
+    width: 100%;
+}
+
+.fragment {
+    /* Define a grid with rows for a banner and a body */
+    -ms-grid-columns: 1fr;
+    -ms-grid-rows: 128px 1fr;
+    display: -ms-grid;
+    height: 100%;
+    width: 100%;
+}
+
+    .fragment header[role=banner] {
+        /* Define a grid with columns for the back button and page title. */
+        -ms-grid-columns: 37px 83px 1fr;
+        -ms-grid-rows: 1fr;
+        display: -ms-grid;
+    }
+
+        .fragment header[role=banner] .win-navigation-backbutton {
+            -ms-grid-column: 2;
+            margin-top: 57px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .fragment header[role=banner] .titlearea {
+            -ms-grid-column: 3;
+            margin-top: 37px;
+        }
+
+            .fragment header[role=banner] .titlearea .pagetitle {
+                width: calc(100% - 20px);
+
+            }
+            .pagetitle {
+                padding-left: 30px;
+                font-weight: bold;
+            }
+    .fragment section[role=main] {
+        -ms-grid-row: 2;
+        height: 100%;
+    }
+
+    .fondo {
+  /*background-image: url('http://mastermarketingla.com/wp-content/uploads/2014/06/proyecto-propio.jpg');*/
+  background-image: url("/images/proyecto-propio.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%; 
+  height: 100%;  
+  
+ 
+    }
+
+    .contenidotexto {
+    	background-color: #C7C7C7;
+    }
+
+    .NavBarcolor {
+    	background-color: #23354B;
+    	box-shadow: 5px 5px rgba(50, 50, 50, 0.8);
+    }
+
+    .colorsubmenu {
+    	background-color: #23354B;
+    }
+
+.btn-color:hover, .subscribe-btn:hover, input[type="button"]:hover {
+	background:linear-gradient(#5BC0DE,#2eaef0);
+	}
+	
+	.btn:hover, .btn:focus{
+		color: #fff;
+		}
+	.btn-color, .subscribe-btn, input[type="button"] {
+		background:linear-gradient(#2eaef0,#5BC0DE);
+		}
+
+
+.secLogin {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+}
+#txtEmail , #txtPass {
+     width: 500px;
+    height: 100px;
+    font-size: 50px;
+    border: #23354B dashed 5px;
+    margin-bottom: 20px;
+}
+.btnLogin {
+    width: 500px;
+    height: 100px;
+    font-size: 30pt !important;
+}
+.nuevoUs{
+   color: #23354B !important; 
+   font-size: 35px !important;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.nuevoUs:visited {
+    color: #23354B;
+}
+.win-listview .win-itembox, .win-itemcontainer .win-itembox {
+    background: none !important;
+}

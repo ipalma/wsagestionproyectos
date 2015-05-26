@@ -1,0 +1,13 @@
+﻿.mensajes section[role=main] {
+    margin-left: 120px;
+    margin-right: 120px;
+}
+.estilomensajes {
+    display: inline-block;
+    width: 600px;
+    min-height: 150px;
+    overflow: scroll;
+    background: #23354B;
+    padding:10px 20px;
+    font-size: 15px;
+}

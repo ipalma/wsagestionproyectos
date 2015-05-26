@@ -1,0 +1,45 @@
+﻿.index section {
+	margin: auto 120px;
+}
+
+.phone .index .page-section {
+	margin: auto 24px;
+}
+
+.phone .index .page-header .titlearea {
+	-ms-grid-column: 1;
+	margin-top: 37px;
+	margin-left: 24px;
+	font-size: 28pt;
+	width: calc(100vw - 20px);
+}
+
+.phone .index .back-button {
+	display: none;
+}
+
+.fragment {
+	-ms-grid-columns: 1fr;
+	-ms-grid-rows: 128px 1fr;
+	display: -ms-grid;
+	height: 100%;
+	width: 100%;
+}
+
+	.fragment section[role=main] {
+		-ms-grid-row: 2;
+		height: 100%;
+	}
+    #listaMisTareas {
+        width: 40%;
+        background: rgba(250, 250, 250, 0.7);
+        padding: 20px;
+        margin: 10px;
+        color: white;
+        float: left;
+    }
+
+    .estiloProyecto {
+        background: #23354B;
+        margin: 10px 0 10px 0;
+    }

@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ListadoDeUsuarios</title>
+
+    <link href="ListadoDeUsuarios.css" rel="stylesheet" />
+    <script src="ListadoDeUsuarios.js"></script>
+</head>
+<body>
+    <div id="templateUsuarios" data-win-control="WinJS.Binding.Template">
+        <div>
+            <img data-win-bind="src:foto" style="max-width: 100px; min-width: 100px;" />
+            <div>
+                <span data-win-bind="innerText:nombre"></span>
+                <span data-win-bind="innerText:apellido"></span>
+                <span data-win-bind="innerText:email"></span>
+            </div>
+        </div>
+    </div>
+<div class="ListadoDeUsuarios fragment">
+    <header class="page-header" aria-label="Header content" role="banner">
+        <button class="back-button" data-win-control="WinJS.UI.BackButton"></button>
+        <h1 class="titlearea win-type-ellipsis Tituloh1">
+            <span class="pagetitle">Todos los usuarios</span>
+        </h1>
+    </header>
+    <section class="page-section" aria-label="Main content" role="main">
+        <div id="listaUsuarios" data-win-control="WinJS.UI.ListView"
+             data-win-options="{itemDataSource:Datos.Usuarios.dataSource,
+             itemTemplate: select('#templateUsuarios'),
+             layout:{type: WinJS.UI.CellSpanningLayout}}"></div>
+    </section>
+</div>
+</body>
+</html>
